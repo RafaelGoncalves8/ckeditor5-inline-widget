@@ -40,6 +40,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /placeholder+[/\\]theme[/\\].+\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
 
