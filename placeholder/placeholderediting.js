@@ -2,7 +2,8 @@ import Plugin from "@ckeditor/ckeditor5-core/src/plugin";
 import { toWidget } from "@ckeditor/ckeditor5-widget/src/utils";
 import Widget from "@ckeditor/ckeditor5-widget/src/widget";
 
-import "./theme/placeholdertheme.css";
+import PlaceholderCommand from "./placeholdercommand";
+import "./theme/placeholder.css";
 
 export default class PlaceholderEditing extends Plugin {
   static get requires() {
@@ -14,6 +15,11 @@ export default class PlaceholderEditing extends Plugin {
 
     this._defineSchema();
     this._defineConverters();
+
+    this.editor.commands.add(
+      "placeholder",
+      new PlaceholderCommand(this.editor)
+    );
   }
 
   _defineSchema() {
