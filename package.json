@@ -1,0 +1,28 @@
+{
+  "name": "ckeditor5-inline-widget",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:RafaelGoncalves8/ckeditor5-inline-widget.git",
+  "author": "Rafael Goncalves <rafaelgoncalves@riseup.net>",
+  "license": "MIT",
+  "dependencies": {
+    "@ckeditor/ckeditor5-basic-styles": "^24.0.0",
+    "@ckeditor/ckeditor5-core": "^24.0.0",
+    "@ckeditor/ckeditor5-dev-utils": "^24.0.0",
+    "@ckeditor/ckeditor5-editor-classic": "^24.0.0",
+    "@ckeditor/ckeditor5-essentials": "^24.0.0",
+    "@ckeditor/ckeditor5-heading": "^24.0.0",
+    "@ckeditor/ckeditor5-inspector": "^2.2.1",
+    "@ckeditor/ckeditor5-list": "^24.0.0",
+    "@ckeditor/ckeditor5-paragraph": "^24.0.0",
+    "@ckeditor/ckeditor5-theme-lark": "^24.0.0",
+    "@ckeditor/ckeditor5-ui": "^24.0.0",
+    "@ckeditor/ckeditor5-utils": "^24.0.0",
+    "@ckeditor/ckeditor5-widget": "^24.0.0",
+    "postcss-loader": "3",
+    "raw-loader": "3",
+    "style-loader": "1",
+    "webpack": "4",
+    "webpack-cli": "3"
+  }
+}
