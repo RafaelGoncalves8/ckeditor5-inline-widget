@@ -30,6 +30,10 @@ export default class PlaceholderEditing extends Plugin {
         viewElement.hasClass("placeholder")
       )
     );
+
+    this.editor.config.define("placeholderConfig", {
+      type: ["date", "first name", "surname"],
+    });
   }
 
   _defineSchema() {

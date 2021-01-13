@@ -12,7 +12,18 @@ import CKEditorInspector from "@ckeditor/ckeditor5-inspector";
 
 ClassicEditor.create(document.querySelector("#editor"), {
   plugins: [Essentials, Paragraph, Heading, List, Bold, Italic, Placeholder],
-  toolbar: ["heading", "bold", "italic", "numberedList", "bulletedList"],
+  toolbar: [
+    "heading",
+    "bold",
+    "italic",
+    "numberedList",
+    "bulletedList",
+    "|",
+    "placeholder",
+  ],
+  placeholderConfig: {
+    types: ["date", "color", "first name", "surname"],
+  },
 })
   .then((editor) => {
     console.log("Editor was initialized", editor);
