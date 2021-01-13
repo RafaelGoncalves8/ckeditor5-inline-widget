@@ -6,6 +6,6 @@
   margin: 0 1px;
 }
 
-.placeholder:selection {
+.placeholder::selection {
   display: none;
 }

@@ -15,7 +15,7 @@ export default class PlaceholderCommand extends Command {
     const model = this.editor.model;
     const selection = model.document.selection;
     const isAllowed = model.schema.checkChild(
-      selecton.focus.parent,
+      selection.focus.parent,
       "placeholder"
     );
     this.isEnabled = isAllowed;
