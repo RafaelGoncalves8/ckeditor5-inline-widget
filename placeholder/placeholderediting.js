@@ -1,5 +1,8 @@
 import Plugin from "@ckeditor/ckeditor5-core/src/plugin";
-import { toWidget } from "@ckeditor/ckeditor5-widget/src/utils";
+import {
+  toWidget,
+  viewToModelPositionOutsideModelElement,
+} from "@ckeditor/ckeditor5-widget/src/utils";
 import Widget from "@ckeditor/ckeditor5-widget/src/widget";
 
 import PlaceholderCommand from "./placeholdercommand";
@@ -19,6 +22,13 @@ export default class PlaceholderEditing extends Plugin {
     this.editor.commands.add(
       "placeholder",
       new PlaceholderCommand(this.editor)
+    );
+
+    this.editor.editing.mapper.on(
+      "viewToModelPosition",
+      viewToModelPositionOutsideModelElement(this.editor.model, (viewElement) =>
+        viewElement.hasClass("placeholder")
+      )
     );
   }
 
